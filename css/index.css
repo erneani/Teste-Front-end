@@ -1,0 +1,317 @@
+/*Resetando o layout da página*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+/*Criação do menu de navegação e do menu principal*/
+nav {
+  background-image: url("../assets/bg-feature.jpeg");
+  background-position: center center;
+  height: 50em;
+}
+/*Filtro escuro aplicado na nav*/
+.navFilter {
+  background: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,0.5) 90%, rgba(0,0,0,0.8)); /*Opacidade com gradiente linear*/
+  height: 50em;
+}
+/*Edição da localização do conteúdo*/
+.navContent {
+  text-align: center;
+  padding: 1em 3em;
+}
+.navContent img {
+  display: inline-block;
+  margin: 0 0 0 8em;
+  float: left;
+}
+/*Lista de navegação*/
+.navContent ul {
+  display: inline-block;
+  float: right;
+  margin-right: 5em;
+  margin-top: 1.5em;
+}
+.navContent li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 -0.15em;
+}
+/*Elementos clicáveis da lista de navegação*/
+.navContent a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.15em;
+  padding: 0.75em 1.5em;
+}
+/*Elementos centrais do folder da página*/
+.folderContent {
+  text-align: center;
+  color: white;
+  margin-top: 15em;
+  width: 100%;
+}
+.folderContent h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin: 0 0 0.25em 0;
+}
+.folderContent p {
+  font-size: 1.35em;
+  width: 50%;
+  margin: auto;
+  font-weight: 100;
+  opacity: 0.8;
+}
+.midFolderContent {
+  display: inline-block;
+}
+
+/*Estilização do elemento ~button~*/
+.button {
+  padding: 0.75em 1.5em;
+  box-shadow: 0.5px 0.5px 5px #333;
+  border: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.7s ease all;
+}
+
+/*Criação das setas e dos efeitos*/
+.seta {
+  display: inline-block;
+}
+.setaR {
+  position: relative;
+  margin-left: 30%;
+}
+.setaL {
+  position: relative;
+  margin-right: 30%;
+
+}
+.gira {
+  transform: rotate(180deg);
+}
+
+/*Criação de botões*/
+.about-button {
+  margin: 2em;
+  color: white;
+  background-color: #456EB5;
+}
+.see-button {
+  margin: 2em 0;
+  color: #FFF;
+  background-color: #F27234;
+  transition: 0.7s ease all;
+}
+
+/*Estilizando efeitos*/
+.clickableBlue {
+  transition: 0.7s ease all;
+}
+.clickableBlue:hover {
+  background-color: white;
+  color: #456EB5;
+}
+.see-button:hover {
+  background-color: #FFF;
+  color: #F27234;
+}
+.selectable {
+  transition: 0.7s ease all;
+  padding: 2em 1.5em;
+  border-radius: 0.2em;
+}
+.selectable:hover {
+  background-color: rgba(200,200,200,0.4);
+  cursor: pointer;
+}
+
+/*Criação do container do artigo*/
+/*Barras inclinadas*/
+.midInitBorder {
+  background: #62C7F3;
+  transform: skewY(-2deg);
+  margin: -3em 0;
+  height: 5em;
+}
+.downInitBorder {
+  background: #FFF;
+  transform: skewY(2deg);
+  margin: -3em 0 1em 0;
+  height: 5em;
+}
+.contactPreBorder {
+  background-color: #456EB5;
+  height: 6em;
+  transform: skewY(3deg);
+}
+.contactBorder {
+  background-color: #61C7F2;
+  height: 7em;
+  transform: skewY(-3deg) translateY(-6em);
+}
+.endBorder {
+  background-color: #FFF;
+  height: 6em;
+  transform: skewY(3deg) translateY(-12em);
+}
+.contentBorder {
+	height: 32em;
+	background-color: #61C7F2;
+	transform: translateY(-9em);
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.midBorder {
+  background: #62C7F3;
+  height: 35em;
+  background-image: url("../assets/bg-quem-somos.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #FFF;
+}
+
+/*Conteúdo da section*/
+.midContent {
+  transform: skewY(2deg);
+  padding: 3em 10em;
+  transform: rotate(0deg);
+  float: left;
+  width: 30%;
+  display: inline-block;
+}
+.midContent p {
+  padding: 0.5em 0;
+}
+.midContent h2 {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+/*Criando o nome enorme da terceira sessão*/
+.bigName {
+  position: absolute;
+  left: 73%;
+  top: 125%;
+}
+.bigHeader {
+  font-size: 6em;
+  text-transform: uppercase;
+  width: 40%;
+}
+
+/*Criando a área de serviços*/
+.session {
+  margin: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F27234;
+  font-size: 1.25em;
+}
+.servicesShow {
+  margin: auto;
+  padding: 2em 3em;
+}
+/*Os cartões dos serviços que serão disponibilizados*/
+.card {
+  padding: 2.5em 2.5em;
+  width: 10em;
+  height: 10em;
+  display: inline-block;
+  border: 4px solid #F27234;
+  margin: 0 1em 0 1em;
+}
+.card img {
+  margin: 1em 0;
+}
+.customers {
+  color: #456EB5;
+  padding: 3em 0 1em 0;
+}
+.customersShow{
+	display: inline-block;
+}
+.cardCustomer {
+  display: inline-block;
+  padding: 2em;
+}
+
+/*Estilizando a section contato*/
+.contact-col {
+  padding: 1em 5%;
+  color: #FFF;
+}
+#vertical-bar {
+  width: 25%;
+  border-left: 0.1em solid #456eb5;
+}
+.contact-col h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.contatos-div {
+  font-size: 1.3em;
+  display: inline-block;
+  margin: 1em 0.5em 0 0;
+}
+.contatos-div img,p {
+  display: inline-block;
+}
+.local {
+  margin-top: 2em;
+}
+
+form h2,p,input {
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+form input {
+  width: 100%;
+  padding: 0.7em 0.5em;
+  font-size: 1em;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent;
+  margin: 0 0 0.7em 0;
+  transition: 1s ease all;
+}
+form input::placeholder {
+  color:#444;
+  opacity: 0.6;
+}
+form input:focus {
+  border: 2px solid #F27234;
+}
+#mensagem {
+  height: 4em;
+}
+.button-align {
+  text-align: right;
+}
+#form-button {
+  margin-top: 0.5em;
+}
+.midFooter {
+  margin: -15em 0 0 0;
+}
+.footerContent {
+	color: #7392C7;
+	font-weight: 100;
+	padding: 2em 3em;
+}
+
+/*Trabalhando com responsividade (testando)*/
+@media (max-width: 1080px){
+	.content {
+		width: 96%;
+	}
+
+}
