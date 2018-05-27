@@ -1,0 +1,43 @@
+@import index.css;
+
+@media only screen and (max-width: 1005px) {
+
+  .button .dropdown {
+    display: block;
+    transition: 0.7s ease all;
+    background-color: #456EB5;
+    color: #FFF;
+    width: 50%;
+    text-transform: uppercase;
+  }
+  .dropdown a {
+    padding: 1em 0;
+  }
+  .menu-button {
+    transition: 1s ease all;
+    width: 25%;
+    box-shadow: none;
+    display: inline-block;
+  }
+  .dropdown-menu {
+    transition: 0.7s ease all;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .midContent {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .bigName {
+    display: none;
+  }
+
+  .servicesShow{
+    width: 80%;
+  }
+
+
+}
+@media only screen and (min-width: 380px) {
+
+}

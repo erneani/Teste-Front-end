@@ -6,10 +6,10 @@
 
     <!-- Importando o css-->
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/tablet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-
 
     <!-- Meta info-->
     <meta charset="utf-8">
@@ -23,7 +23,7 @@
         <!-- Container apenas do conteúdo -->
         <div class="navContent">
           <img src="assets/logo.png"/>
-          <ul>
+          <ul class="menu-list">
             <!-- Links clicáveis com classe clicável-->
             <li><a href="#" class="clickableBlue">Inicial</a></li>
             <li><a href="#" class="clickableBlue">Quem somos</a></li>
@@ -31,10 +31,16 @@
             <li><a href="#" class="clickableBlue">Clientes</a></li>
             <li><a href="#" class="clickableBlue">Fale conosco</a></li>
           </ul>
+          <div class="dropdown-menu">
+            <button class="button about-button menu-button">
+              Menu
+              <div class="dropdown">
+              </div>
+            </button>
+          </div>
         </div>
         <!-- Todo o conteúdo subsequente a navegação e anterior ao article -->
         <div class="folderContent">
-          <div class="seta"><img src="assets/seta.png" class="selectable setaL"></div>
           <div class="midFolderContent">
           	<h1>Lorem ipsum dolor sit amet</h1>
           	<p>
@@ -44,8 +50,27 @@
             <br>
             <!-- Botão clicável-->
           	<button class="about-button button clickableBlue">Fale com a gente</button>
-          	</div>
-          	<div class="seta"><img src="assets/seta.png" class="gira selectable setaR"></div>
+          </div>
+          <div class="midFolderContent">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>
+            	Morbi id pharetra leo, ut tincidunt enim. Suspendisse
+            	lectus nibh, placerat sit amet.
+            </p>
+            <br>
+            <!-- Botão clicável-->
+          	<button class="about-button button clickableBlue">Fale com a gente</button>
+          </div>
+          <div class="midFolderContent">
+          	<h1>Lorem ipsum dolor sit amet</h1>
+          	<p>
+            	Morbi id pharetra leo, ut tincidunt enim. Suspendisse
+            	lectus nibh, placerat sit amet.
+          	</p>
+            <br>
+            <!-- Botão clicável-->
+          	<button class="about-button button clickableBlue">Fale com a gente</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -82,44 +107,41 @@
       		<h2>Nossos serviços</h2>
       	</div>
       	<div class="servicesShow">
-      		<div class="card">
-      			<img src="assets/eng.png" class="cardImg.jpg">
-      			<h2>Lorem Ipsum</h2>
-      		</div>
-      		<div class="card">
-      			<img src="assets/eng.png" class="cardImg.jpg">
-      			<h2>Lorem Ipsum</h2>
-      		</div>
-      		<div class="card">
-      			<img src="assets/eng.png" class="cardImg.jpg">
-      			<h2>Lorem Ipsum</h2>
-      		</div>
+          <div>
+      			  <img src="assets/eng.png" class="cardImg">
+          </div>
+
+          <div>
+      			  <img src="assets/eng.png" class="cardImg">
+          </div>
+
+          <div>
+      			  <img src="assets/eng.png" class="cardImg">
+          </div>
       	</div>
       	<div class="customers">
       		<div class="customersTitle">
       			<h2>Nossos clientes</h2>
      	 	</div>
-     	 	<div class="seta rodarEsquerda"><img src="assets/setaAzul.png" class="selectable"></div>
       		<div class="customersShow">
       			<div class="cardCustomer">
-      				<h2><img src="assets/customer1.png"></h2>
+      				<img src="assets/customer1.png">
       			</div>
       			<div class="cardCustomer">
-      				<h2><img src="assets/customer2.png"></h2>
+      				<img src="assets/customer2.png">
       			</div>
 	      		<div class="cardCustomer">
-    	  			<h2><img src="assets/customer3.png"></h2>
+    	  			<img src="assets/customer3.png">
       			</div>
       			<div class="cardCustomer">
-      				<h2><img src="assets/customer4.png"></h2>
+      				<img src="assets/customer4.png">
       			</div>
       		</div>
-      	    <div class="seta"><img src="assets/setaAzul.png" class="selectable gira"></div>
         </div>
       </div>
       <div class="contactPreBorder"></div>
       <div class="contactBorder"></div>
-      <div class="contentBorder">
+      <div class="contentBorder" id="faleconosco">
 
         <div class="contact-col">
           <div class="contato">
@@ -182,8 +204,11 @@
     </footer>
 
     <!--Importando o javascript para o carousel-->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
