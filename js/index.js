@@ -51,6 +51,7 @@ $(document).ready(function() {
   //Criando menu dropdown
   $('.menu-button').on('click',function(){
     if(!$('.menu-button').hasClass('ativo')){
+      $('.dropdown').fadeIn();
       $('.dropdown').append("<li><a href='#' id='inicial'>Inicial</a></li> <br>");
       $('.dropdown').append("<li><a href='#' id='quemsomos'>Quem somos</a></li> <br>");
       $('.dropdown').append("<li><a href='#' id='services'>Serviços</a></li> <br>");
@@ -62,6 +63,7 @@ $(document).ready(function() {
       $('.dropdown li').remove();
       $('.dropdown br').remove();
       $('.menu-button').removeClass('ativo');
+      $('dropdown').fadeOut();
     }
   });
 
@@ -81,8 +83,8 @@ $(document).ready(function() {
   });
   //Slider Inicial
   $('.folderContent').slick({
-    prevArrow: "<div style='font-size: 3em'><i class='fas fa-angle-left'></i></div>",
-    nextArrow: "<div style='font-size: 3em'><i class='fas fa-angle-right'></i></div>",
+    prevArrow: "<div style='font-size: 3em' class='leftArrow'><i class='fas fa-angle-left'></i></div>",
+    nextArrow: "<div style='font-size: 3em' class='rightArrow'><i class='fas fa-angle-right'></i></div>",
     slidesToShow: 1,
     responsive: [
       {
@@ -105,10 +107,9 @@ $(document).ready(function() {
         breakpoint: 1270,
         settings: {
           slidesToShow: 1,
-          arrows: true,
           infinite: true,
-          prevArrow: "<div style='font-size: 3em; color: #F27234'><i class='fas fa-angle-left'></i></div>",
-          nextArrow: "<div style='font-size: 3em; color: #F27234'><i class='fas fa-angle-right'></i></div>",
+          prevArrow: "<div style='font-size: 3em; color: #F27234' class='leftArrow'><i class='fas fa-angle-left'></i></div>",
+          nextArrow: "<div style='font-size: 3em; color: #F27234' class='rightArrow'><i class='fas fa-angle-right'></i></div>",
         }
       }
     ]
@@ -116,8 +117,8 @@ $(document).ready(function() {
 
   //Slides dos clientes
   $('.customersShow').slick({
-    prevArrow: "<div style='font-size: 3em; color: #456EB5'><i class='fas fa-angle-left'></i></div>",
-    nextArrow: "<div style='font-size: 3em; color: #456EB5'><i class='fas fa-angle-right'></i></div>",
+    prevArrow: "<div style='font-size: 3em; color: #456EB5' class='leftArrow'><i class='fas fa-angle-left'></i></div>",
+    nextArrow: "<div style='font-size: 3em; color: #456EB5' class='rightArrow'><i class='fas fa-angle-right'></i></div>",
     slidesToShow: 4,
     infinite: true,
     responsive: [
