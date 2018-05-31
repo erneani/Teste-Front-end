@@ -9,19 +9,23 @@
 nav {
   background-image: url("../assets/bg-feature.jpeg");
   background-position: center center;
-  height: auto;
+  height: 50em;
   overflow: hidden;
 }
 /*Filtro escuro aplicado na nav*/
 .navFilter {
   background: linear-gradient(0deg, rgba(0,0,0,0.4),rgba(0,0,0,0.5) 90%, rgba(0,0,0,0.8)); /*Opacidade com gradiente linear*/
   height: 50em;
+  overflow: hidden;
 }
 /*Edição da localização do conteúdo*/
 .navContent {
   text-align: center;
   padding: 1em 3em;
-
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  transition: 0.5s ease all;
 }
 .navContent img {
   display: inline-block;
@@ -53,6 +57,7 @@ nav {
   text-align: center;
   color: white;
   margin-top: 20%;
+  margin-bottom: 10%;
   display: inline-block;
   width: 100%;
 }
@@ -323,7 +328,7 @@ form input:focus, textarea:focus {
   display: none;
 }
 body {
-  min-width: 480px;
+  min-width: 530px;
 }
 
 /*Customizando os dots do slick.js*/

@@ -3,9 +3,15 @@ $(document).ready(function() {
   if($(window).width() <= 1005){
     $('.menu-list').css('display','none');
   }
-  else {
-    $('.dropdown-menu, .dropdown').css('display','none');
-  }
+
+  $(document).scroll(function(){
+    if($(document).scrollTop() > 150){
+      $('.navContent').css('background-color','rgba(20,20,20,0.8)');
+    }
+    else if($(document).scrollTop() <= 150){
+      $('.navContent').css('background-color', 'transparent');
+    }
+  });
 
   $("#inicial").click(function() {
     $('html, body').animate({
