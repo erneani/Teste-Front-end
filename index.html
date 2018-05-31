@@ -5,6 +5,7 @@
     <title>HealthyLife</title>
 
     <!-- Importando o css-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/tablet.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
@@ -21,25 +22,27 @@
       <!-- Filtro para imagem -->
       <div class="navFilter">
         <!-- Container apenas do conteúdo -->
-        <div class="navContent">
+        <div class="navContent" id="inicialNow">
           <img src="assets/logo.png"/>
           <ul class="menu-list">
             <!-- Links clicáveis com classe clicável-->
-            <li><a href="#" class="clickableBlue">Inicial</a></li>
-            <li><a href="#" class="clickableBlue">Quem somos</a></li>
-            <li><a href="#" class="clickableBlue">Serviços</a></li>
-            <li><a href="#" class="clickableBlue">Clientes</a></li>
-            <li><a href="#" class="clickableBlue">Fale conosco</a></li>
+            <li><a href="#" class="clickableBlue" id="inicial">Inicial</a></li>
+            <li><a href="#" class="clickableBlue" id="quemsomos">Quem somos</a></li>
+            <li><a href="#" class="clickableBlue" id="services">Serviços</a></li>
+            <li><a href="#" class="clickableBlue" id="clientes">Clientes</a></li>
+            <li><a href="#" class="clickableBlue" id="talktous">Fale conosco</a></li>
           </ul>
           <div class="dropdown-menu">
             <button class="button about-button menu-button">
-              Menu
-              <div class="dropdown">
-              </div>
+              <i class="fas fa-bars"></i>Menu
+              <br>
             </button>
           </div>
         </div>
+        <div class="dropdown">
+        </div>
         <!-- Todo o conteúdo subsequente a navegação e anterior ao article -->
+        <center>
         <div class="folderContent">
           <div class="midFolderContent">
           	<h1>Lorem ipsum dolor sit amet</h1>
@@ -52,31 +55,33 @@
           	<button class="about-button button clickableBlue">Fale com a gente</button>
           </div>
           <div class="midFolderContent">
-            <h1>Lorem ipsum dolor sit amet</h1>
+            <h1>Integer turpis odio, accumsan sit.</h1>
             <p>
-            	Morbi id pharetra leo, ut tincidunt enim. Suspendisse
-            	lectus nibh, placerat sit amet.
+            	Pellentesque eu lacinia odio. Nulla dapibus diam nec
+              mattis efficitur. Suspendisse iaculis luctus felis,
+              a faucibus quam sagittis nec.
             </p>
             <br>
             <!-- Botão clicável-->
           	<button class="about-button button clickableBlue">Fale com a gente</button>
           </div>
           <div class="midFolderContent">
-          	<h1>Lorem ipsum dolor sit amet</h1>
+          	<h1>Donec velit nunc egestas sed nulla.</h1>
           	<p>
-            	Morbi id pharetra leo, ut tincidunt enim. Suspendisse
-            	lectus nibh, placerat sit amet.
+            	Proin odio lacus, convallis id justo suscipit,
+              fringilla condimentum nisl. Phasellus varius rhoncus pulvinar.
           	</p>
             <br>
             <!-- Botão clicável-->
           	<button class="about-button button clickableBlue">Fale com a gente</button>
           </div>
         </div>
+      </center>
       </div>
     </nav>
     <!--Componentes das sessões do meio-->
     <article>
-      <div class="midInitBorder"></div>
+      <div class="midInitBorder" id="whoweare"></div>
       <div class="midBorder">
         <div class="midContent">
         	<h2>A HealthyLife</h2>
@@ -103,9 +108,10 @@
       </div>
       <div class="downInitBorder"></div>
       <div class="session">
-      	<div class="servicesTitle">
+      	<div class="servicesTitle" id="servicesarea">
       		<h2>Nossos serviços</h2>
       	</div>
+        <center>
       	<div class="servicesShow">
           <div>
       			  <img src="assets/eng.png" class="cardImg">
@@ -119,10 +125,12 @@
       			  <img src="assets/eng.png" class="cardImg">
           </div>
       	</div>
+      </center>
       	<div class="customers">
-      		<div class="customersTitle">
+      		<div class="customersTitle" id="customers">
       			<h2>Nossos clientes</h2>
      	 	</div>
+        <center>
       		<div class="customersShow">
       			<div class="cardCustomer">
       				<img src="assets/customer1.png">
@@ -136,32 +144,50 @@
       			<div class="cardCustomer">
       				<img src="assets/customer4.png">
       			</div>
+            <div class="cardCustomer">
+      				<img src="assets/customer1.png">
+      			</div>
+      			<div class="cardCustomer">
+      				<img src="assets/customer2.png">
+      			</div>
+	      		<div class="cardCustomer">
+    	  			<img src="assets/customer3.png">
+      			</div>
+      			<div class="cardCustomer">
+      				<img src="assets/customer4.png">
+      			</div>
       		</div>
+        </center>
         </div>
       </div>
       <div class="contactPreBorder"></div>
-      <div class="contactBorder"></div>
-      <div class="contentBorder" id="faleconosco">
+      <div class="contactBorder"  id="faleconosco"></div>
+      <div class="contentBorder">
 
         <div class="contact-col">
           <div class="contato">
             <h2>Nossos contatos</h2>
             <div class="contatos-div">
-              <img src="assets/phone.png">
+              <div style="color: #F27234; transform: rotate(90deg); display: inline-block">
+                <i class="fas fa-phone"></i>
+              </div>
               <p>+55 84 3333-4444</p>
             </div>
 
             <div class="contatos-div">
-              <img src="assets/phone.png">
+              <div style="color: #F27234; transform: rotate(90deg); display: inline-block">
+                <i class="fas fa-phone"></i>
+              </div>
               <p>+55 84 3333-4444</p>
             </div>
 
             <div class="contatos-div">
-              <img src="assets/mail.png">
+              <div style="color: #F27234">
+                <i class="fas fa-envelope"></i>
+              </div>
               <p>contato@healthy.com.br</p>
             </div>
           </div>
-
           <div class="local">
             <h2>Nosso escritório</h2>
             <p>Av. Fernado Luis Miguel, 2356, João Correia, Natal-RN.</p>
@@ -175,21 +201,23 @@
               Se preferir, nos envie uma mensagem
               que te retornaremos em breve!
             </p>
+            <div class="inform">
             <br>
             <input type="text" placeholder="Seu nome" id="nome">
-            <br>
+            <br id="break">
             <input type="text" placeholder="usuário@email.com" id="email">
             <br>
             <input type="text" placeholder="Seu telefone" id="telefone">
-            <br>
+            <br id="break">
             <input type="text" placeholder="Assunto" id="assunto">
             <br>
-            <input type="text" placeholder="Mensagem" id="mensagem">
+            <textarea placeholder="Mensagem" id="mensagem"></textarea>
             <br>
             <div class="button-align">
               <button type="submit" class="button see-button" id="form-button">Enviar</button>
             </div>
           </form>
+          </div>
         </div>
 
       </div>
@@ -204,9 +232,9 @@
     </footer>
 
     <!--Importando o javascript para o carousel-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>

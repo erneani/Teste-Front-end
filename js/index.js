@@ -3,6 +3,35 @@ $(document).ready(function() {
   if($(window).width() <= 1005){
     $('.menu-list').css('display','none');
   }
+  else {
+    $('.dropdown-menu, .dropdown').css('display','none');
+  }
+
+  $("#inicial").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#inicialNow").offset().top
+    }, 1000);
+  });
+  $("#quemsomos").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#whoweare").offset().top
+    }, 1000);
+  });
+  $("#services").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#servicesarea").offset().top
+    }, 1000);
+  });
+  $("#clientes").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#customers").offset().top
+    }, 1000);
+  });
+  $("#talktous").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#faleconosco").offset().top
+    }, 1000);
+  });
 
   $(window).resize(function(){
     if($(window).width() <= 1005){
@@ -16,11 +45,11 @@ $(document).ready(function() {
   //Criando menu dropdown
   $('.menu-button').on('click',function(){
     if(!$('.menu-button').hasClass('ativo')){
-      $('.dropdown').append("<li><a href='#'>Inicial</a></li> <br>");
-      $('.dropdown').append("<li><a href='#'>Quem somos</a></li> <br>");
-      $('.dropdown').append("<li><a href='#'>Serviços</a></li> <br>");
-      $('.dropdown').append("<li><a href='#'>Clientes</a></li> <br>");
-      $('.dropdown').append("<li><a href='#'>Fale conosco</a></li>");
+      $('.dropdown').append("<li><a href='#' id='inicial'>Inicial</a></li> <br>");
+      $('.dropdown').append("<li><a href='#' id='quemsomos'>Quem somos</a></li> <br>");
+      $('.dropdown').append("<li><a href='#' id='services'>Serviços</a></li> <br>");
+      $('.dropdown').append("<li><a href='#' id='clientes'>Clientes</a></li> <br>");
+      $('.dropdown').append("<li><a href='#' id='talktous'>Fale conosco</a></li>");
       $('.menu-button').addClass('ativo');
     }
     else {
@@ -34,22 +63,30 @@ $(document).ready(function() {
   $('.menu-button').on('click',function(){
     if(!$('.menu-button').hasClass('focado')){
       $('.menu-button').addClass('focado');
-      $('.menu-button').css('width','90%');
+      $('.dropdown').css('display','block');
+      $('.dropdown').css('width','100%');
     }
     else {
       $('.menu-button').removeClass('focado');
       $('.menu-button').css('width','25%');
+      $('.dropdown').css('display','none');
+      $('.dropdown').css('width','30%');
     }
   });
   //Slider Inicial
   $('.folderContent').slick({
+    prevArrow: "<div style='font-size: 3em'><i class='fas fa-angle-left'></i></div>",
+    nextArrow: "<div style='font-size: 3em'><i class='fas fa-angle-right'></i></div>",
     slidesToShow: 1,
     responsive: [
       {
-        breakpoint: 650,
+        breakpoint: 750,
         settings: {
           arrows: false,
-          dots: true
+          dots: true,
+          customPaging: function(slider,i){
+            return "<input type='radio' name='radioDot' class='my-dot'/>";
+          }
         }
       }
     ]
@@ -57,40 +94,26 @@ $(document).ready(function() {
   //Slider dos Serviços
   $('.servicesShow').slick({
     slidesToShow: 3,
-    arrows: false,
     responsive: [
       {
         breakpoint: 1270,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           arrows: true,
-          infinite: true
+          infinite: true,
+          prevArrow: "<div style='font-size: 3em; color: #F27234'><i class='fas fa-angle-left'></i></div>",
+          nextArrow: "<div style='font-size: 3em; color: #F27234'><i class='fas fa-angle-right'></i></div>",
         }
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          slidestoShow: 1,
-          arrows: true,
-          infinite: true
-        }
-      },
-      {
-      breakpoint: 650,
-      settings: {
-        slidesToShow: 1,
-        arrows: true,
-        infinite: true
       }
-    }
     ]
   });
 
   //Slides dos clientes
   $('.customersShow').slick({
+    prevArrow: "<div style='font-size: 3em; color: #456EB5'><i class='fas fa-angle-left'></i></div>",
+    nextArrow: "<div style='font-size: 3em; color: #456EB5'><i class='fas fa-angle-right'></i></div>",
     slidesToShow: 4,
     infinite: true,
-    arrows: true,
     responsive: [
       {
         breakpoint: 1005,

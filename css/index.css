@@ -21,6 +21,7 @@ nav {
 .navContent {
   text-align: center;
   padding: 1em 3em;
+
 }
 .navContent img {
   display: inline-block;
@@ -52,6 +53,7 @@ nav {
   text-align: center;
   color: white;
   margin-top: 20%;
+  display: inline-block;
   width: 100%;
 }
 .folderContent h1 {
@@ -87,13 +89,10 @@ nav {
   display: inline-block;
 }
 .setaR {
-  position: relative;
-  margin-left: 30%;
+  right: 0;
 }
 .setaL {
-  position: relative;
-  margin-right: 30%;
-
+  left: 0;
 }
 .gira {
   transform: rotate(180deg);
@@ -141,6 +140,7 @@ nav {
   transform: skewY(-2deg);
   margin: -3em 0;
   height: 5em;
+  overflow-x: hidden;
 }
 .downInitBorder {
   background: #FFF;
@@ -151,11 +151,13 @@ nav {
 .contactPreBorder {
   background-color: #456EB5;
   height: 6em;
+  width: 100%;
   transform: skewY(3deg);
 }
 .contactBorder {
   background-color: #61C7F2;
   height: 7em;
+  width: 100%;
   transform: skewY(-3deg) translateY(-6em);
 }
 .endBorder {
@@ -202,7 +204,7 @@ nav {
 /*Criando o nome enorme da terceira sessão*/
 .bigName {
   position: absolute;
-  left: 73%;
+  left: 70%;
   top: 125%;
 }
 .bigHeader {
@@ -266,8 +268,9 @@ nav {
   display: inline-block;
   margin: 1em 0.5em 0 0;
 }
-.contatos-div img,p {
-  display: inline-block;
+.contatos-div img, i {
+  display: inline-flex;
+  flex-direction: row;
 }
 .local {
   margin-top: 2em;
@@ -277,7 +280,7 @@ form h2,p,input {
   margin-bottom: 0.5em;
   width: 100%;
 }
-form input {
+form input, textarea {
   width: 100%;
   padding: 0.7em 0.5em;
   font-size: 1em;
@@ -286,11 +289,11 @@ form input {
   margin: 0 0 0.7em 0;
   transition: 1s ease all;
 }
-form input::placeholder {
+form input::placeholder, textarea::placeholder {
   color:#444;
   opacity: 0.6;
 }
-form input:focus {
+form input:focus, textarea:focus {
   border: 2px solid #F27234;
 }
 #mensagem {
@@ -320,5 +323,16 @@ form input:focus {
   display: none;
 }
 body {
-  min-width: 380px;
+  min-width: 480px;
+}
+
+/*Customizando os dots do slick.js*/
+.my-dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #CCC;
+}
+.my-dot:checked {
+  background-color: #FFF;
 }

@@ -1,26 +1,85 @@
 @import index.css;
 
+@media (min-width: 1400px) {
+  .footerContent {
+    margin-top: -16%
+  }
+}
+
 @media only screen and (max-width: 1005px) {
 
-  .button .dropdown {
-    display: block;
+
+  .dropdown {
+    display: hidden;
+    position: absolute;
     transition: 0.7s ease all;
     background-color: #456EB5;
     color: #FFF;
-    width: 50%;
+    width: 100%;
     text-transform: uppercase;
+    z-index: 1;
+    margin-top: -50px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .dropdown li {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
   .dropdown a {
-    padding: 1em 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.15em;
+    padding: 0.75em 1.5em;
   }
+
   .menu-button {
     transition: 1s ease all;
     width: 25%;
     box-shadow: none;
     display: inline-block;
+    right: 0;
   }
   .dropdown-menu {
     transition: 0.7s ease all;
+  }
+
+  /*Por enquanto*/
+  .bigHeader {
+    display: none;
+  }
+  .contentBorder{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    justify-content: center;
+  }
+  .contact-col,#vertical-bar {
+    width: 90%;
+    margin: auto 0;
+    padding: auto;
+  }
+  .contact-col iframe {
+    width: 110%;
+    margin: auto -5% auto -5%;
+    padding: auto;
+  }
+  #break {
+    display: none;
+  }
+  form {
+    margin: auto;
+  }
+  form input {
+    width: 46%;
+  }
+  form textarea {
+    width: 100%;
+  }
+  .inform {
+    margin: auto;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -36,7 +95,12 @@
     width: 80%;
   }
 
-
+  .navContent img {
+    margin-left: 0;
+  }
+  form input, textarea {
+    width: 95%;
+  }
 }
 @media only screen and (min-width: 380px) {
 
